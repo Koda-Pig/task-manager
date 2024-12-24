@@ -1,5 +1,6 @@
 import { AppHeader } from "@/components/specific/app-header";
 import { AppCardCompletion } from "@/components/specific/app-card-completion";
+import { AppCardActivity } from "@/components/specific/app-card-activity";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
           currentValue={65}
           totalValue={125}
         />
+        <AppCardActivity />
         <div className="h-full rounded-xl bg-muted/50" />
         <div className="h-full rounded-xl bg-muted/50" />
         <div className="h-full rounded-xl bg-muted/50" />
