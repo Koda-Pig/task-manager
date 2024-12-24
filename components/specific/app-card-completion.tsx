@@ -2,6 +2,7 @@ import * as React from "react";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { AppCircleProgress } from "./app-circle-progress";
+
 interface AppCardCompletionProps {
   title: string;
   currentValue: number;

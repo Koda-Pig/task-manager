@@ -12,46 +12,8 @@ import {
   SidebarRail,
 } from "@/components/ui/sidebar";
 import { AppLogo } from "@/components/specific/app-logo";
-import {
-  BookSVG,
-  CategorySVG,
-  UserOctagonSVG,
-  MessageSVG,
-  SettingSVG,
-} from "../react-icons";
 import Link from "next/link";
-
-// This is sample data.
-const data = {
-  navMain: [
-    {
-      title: "Overview",
-      url: "#",
-      icon: CategorySVG,
-      isActive: true,
-    },
-    {
-      title: "Task",
-      icon: BookSVG,
-      url: "#",
-    },
-    {
-      title: "Mentors",
-      icon: UserOctagonSVG,
-      url: "#",
-    },
-    {
-      title: "Message",
-      icon: MessageSVG,
-      url: "#",
-    },
-    {
-      title: "Settings",
-      icon: SettingSVG,
-      url: "#",
-    },
-  ],
-};
+import data from "@/data";
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
