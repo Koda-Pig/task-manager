@@ -36,7 +36,7 @@ const chartConfig = {
 
 export function AppCardActivity() {
   return (
-    <Card className="xl:col-span-2">
+    <Card className="lg:col-span-2">
       <CardHeader>
         <CardTitle>
           <div className="flex justify-between">
@@ -59,7 +59,7 @@ export function AppCardActivity() {
         </CardTitle>
       </CardHeader>
       <CardContent>
-        <ChartContainer config={chartConfig} className="xl:aspect-[21/9]">
+        <ChartContainer config={chartConfig} className="lg:aspect-[21/9]">
           <LineChart
             accessibilityLayer
             data={chartData}

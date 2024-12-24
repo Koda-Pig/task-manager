@@ -68,6 +68,10 @@ const config: Config = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      backgroundColor: {
+        sidebar: "hsl(var(--sidebar-background))",
+        "sidebar-background": "hsl(var(--sidebar-background))",
+      },
     },
   },
   plugins: [tailwindanimate],
