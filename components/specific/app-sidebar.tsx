@@ -12,12 +12,17 @@ import {
   SidebarRail,
 } from "@/components/ui/sidebar";
 import { AppLogo } from "@/components/specific/app-logo";
-import { BookSVG, CategorySVG } from "../react-icons";
+import {
+  BookSVG,
+  CategorySVG,
+  UserOctagonSVG,
+  MessageSVG,
+  SettingSVG,
+} from "../react-icons";
 import Link from "next/link";
 
 // This is sample data.
 const data = {
-  versions: ["1.0.1", "1.1.0-alpha", "2.0.0-beta1"],
   navMain: [
     {
       title: "Overview",
@@ -30,17 +35,31 @@ const data = {
       icon: BookSVG,
       url: "#",
     },
+    {
+      title: "Mentors",
+      icon: UserOctagonSVG,
+      url: "#",
+    },
+    {
+      title: "Message",
+      icon: MessageSVG,
+      url: "#",
+    },
+    {
+      title: "Settings",
+      icon: SettingSVG,
+      url: "#",
+    },
   ],
 };
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
-    <Sidebar {...props}>
+    <Sidebar {...props} className="p-8">
       <SidebarHeader>
         <AppLogo />
       </SidebarHeader>
       <SidebarContent>
-        {/* We create a SidebarGroup for each parent. */}
         {data.navMain.map((item) => (
           <SidebarGroup key={item.title}>
             <SidebarGroupContent>
