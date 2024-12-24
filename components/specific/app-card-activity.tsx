@@ -1,14 +1,16 @@
 "use client";
 
-import { CartesianGrid, Line, LineChart, XAxis } from "recharts";
-
+import { CartesianGrid, Line, LineChart, XAxis, YAxis } from "recharts";
 import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   ChartConfig,
   ChartContainer,
@@ -34,13 +36,30 @@ const chartConfig = {
 
 export function AppCardActivity() {
   return (
-    <Card>
+    <Card className="xl:col-span-2">
       <CardHeader>
-        <CardTitle>Line Chart - Dots</CardTitle>
-        <CardDescription>January - June 2024</CardDescription>
+        <CardTitle>
+          <div className="flex justify-between">
+            <span>Activity</span>
+            <Select>
+              <SelectTrigger className="w-auto border-none bg-transparent">
+                <SelectValue placeholder="This Week" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectGroup>
+                  <SelectLabel>Fruits</SelectLabel>
+                  <SelectItem value="Today">Today</SelectItem>
+                  <SelectItem value="Week">This Week</SelectItem>
+                  <SelectItem value="Month">This Month</SelectItem>
+                  <SelectItem value="Year">This Year</SelectItem>
+                </SelectGroup>
+              </SelectContent>
+            </Select>
+          </div>
+        </CardTitle>
       </CardHeader>
       <CardContent>
-        <ChartContainer config={chartConfig}>
+        <ChartContainer config={chartConfig} className="xl:aspect-[21/9]">
           <LineChart
             accessibilityLayer
             data={chartData}
@@ -56,9 +75,15 @@ export function AppCardActivity() {
               dataKey="week"
               tickLine={false}
               axisLine={false}
-              tickMargin={8}
-              className="translate-y-2"
+              tickMargin={16}
               tickFormatter={(value) => value.slice(0, 3)}
+            />
+            <YAxis
+              dataKey="tasks"
+              tickLine={false}
+              axisLine={false}
+              tickMargin={12}
+              allowDecimals={false}
             />
             <ChartTooltip
               cursor={false}
