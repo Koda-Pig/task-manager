@@ -59,7 +59,10 @@ export function AppCardActivity() {
         </CardTitle>
       </CardHeader>
       <CardContent>
-        <ChartContainer config={chartConfig} className="lg:aspect-[21/9]">
+        <ChartContainer
+          config={chartConfig}
+          // className="aspect-video lg:aspect-[21/9]"
+        >
           <LineChart
             accessibilityLayer
             data={chartData}

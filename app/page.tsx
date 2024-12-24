@@ -18,11 +18,7 @@ export default function Home() {
           totalValue={125}
         />
         <AppCardActivity />
-        <AppMentors className="lg:col-span-full" users={data.mentors} />
-        <div className="h-full rounded-xl bg-red-400 min-h-32" />
-        <div className="h-full rounded-xl bg-red-400 min-h-32" />
-        <div className="h-full rounded-xl bg-red-400 min-h-32" />
-        <div className="h-full rounded-xl bg-red-400 min-h-32" />
+        <AppMentors className="col-span-full w-full" users={data.mentors} />
         <div className="h-full rounded-xl bg-red-400 min-h-32" />
       </div>
     </>
