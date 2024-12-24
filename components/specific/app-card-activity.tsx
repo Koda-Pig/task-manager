@@ -42,7 +42,7 @@ export function AppCardActivity() {
           <div className="flex justify-between">
             <span>Activity</span>
             <Select>
-              <SelectTrigger className="w-auto border-none bg-transparent">
+              <SelectTrigger className="w-auto border-none bg-transparent py-0 h-auto">
                 <SelectValue placeholder="This Week" />
               </SelectTrigger>
               <SelectContent>
@@ -64,7 +64,7 @@ export function AppCardActivity() {
             accessibilityLayer
             data={chartData}
             margin={{
-              left: 20,
+              left: -20,
               right: 20,
               top: 20,
               bottom: 20,
