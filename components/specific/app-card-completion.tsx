@@ -24,7 +24,7 @@ export function AppCardCompletion({
   const completionPercentage = (currentValue / totalValue) * 100;
 
   return (
-    <Card className="w-[350px]">
+    <Card className="bg-foreground text-card">
       <CardHeader>
         <CardTitle>{title}</CardTitle>
         <CardDescription>{currentValue}</CardDescription>

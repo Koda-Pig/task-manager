@@ -3,17 +3,12 @@ import localFont from "next/font/local";
 import Providers from "./providers";
 import { AppSidebar } from "@/components/specific/app-sidebar";
 import { SidebarInset } from "@/components/ui/sidebar";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const jakartaSans = Plus_Jakarta_Sans({
+  variable: "--font-primary",
+  subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
@@ -28,9 +23,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${jakartaSans.variable} antialiased`}>
         <Providers>
           <AppSidebar />
           <SidebarInset>{children}</SidebarInset>

@@ -21,7 +21,7 @@ export function AppHeader({ title, subTitle }: Readonly<AppHeaderProps>) {
         width={52}
         height={52}
         className="rounded-full ml-auto"
-        src="https://i.pravatar.cc/128"
+        src="https://avatar.iran.liara.run/public"
       />
     </header>
   );
