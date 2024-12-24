@@ -1,15 +1,7 @@
 import * as React from "react";
 
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { AppCircleProgress } from "./app-circle-progress";
 interface AppCardCompletionProps {
   title: string;
   currentValue: number;
@@ -27,16 +19,17 @@ export function AppCardCompletion({
     <Card className="bg-foreground text-card">
       <CardHeader>
         <CardTitle>{title}</CardTitle>
-        <CardDescription>{currentValue}</CardDescription>
       </CardHeader>
       <CardContent>
-        <p>{totalValue}</p>
+        <p className="text-[2rem] mb-4">{currentValue}</p>
+        <div className="flex items-center gap-[18px]">
+          <AppCircleProgress
+            percentage={completionPercentage}
+            progressColor="hsl(var(--accent))"
+          />
+          <p>{totalValue}</p>
+        </div>
       </CardContent>
-      <CardFooter className="flex justify-between">
-        <Button variant="outline">
-          Percentage thing here {completionPercentage}
-        </Button>
-      </CardFooter>
     </Card>
   );
 }

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import Providers from "./providers";
 import { AppSidebar } from "@/components/specific/app-sidebar";
 import { SidebarInset } from "@/components/ui/sidebar";
