@@ -1,5 +1,4 @@
-// import AppNav from "@/components/specific/nav";
-import { AppSidebar } from "@/components/specific/app-sidebar";
+import { AppSidebar } from "@/components/ui/app-sidebar";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -33,19 +32,14 @@ export default function Page() {
             </BreadcrumbList>
           </Breadcrumb>
         </header>
-        <div className="flex flex-1 flex-col gap-4 p-4">
+        <main className="flex flex-1 flex-col gap-4 p-4">
           <div className="grid auto-rows-min gap-4 md:grid-cols-3">
             <div className="aspect-video rounded-xl bg-muted/50" />
             <div className="aspect-video rounded-xl bg-muted/50" />
             <div className="aspect-video rounded-xl bg-muted/50" />
-            <main className="">
-              <h1>Components</h1>
-              <h2>Navigation Menu</h2>
-              {/* <AppNav /> */}
-            </main>
           </div>
           <div className="min-h-[100vh] flex-1 rounded-xl bg-muted/50 md:min-h-min" />
-        </div>
+        </main>
       </SidebarInset>
     </>
   );

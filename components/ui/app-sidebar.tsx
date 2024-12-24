@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { SearchForm } from "@/components/search-form";
+import { SearchForm } from "@/components/ui/search-form";
 import {
   Sidebar,
   SidebarContent,
